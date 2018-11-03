@@ -1,0 +1,38 @@
+@import 'common.scss';
+@import 'mixin.scss';
+* {
+    margin: 0;
+    padding: 0;
+    @include sizing;
+}
+
+html,
+body,
+.wrap {
+    @include num(100%, 100%);
+    overflow: hidden;
+}
+
+.content {
+    line-height: pxTorem(26px);
+    h4 {
+        font-size: pxTorem(22px);
+        #{$bg}: orange;
+    }
+    p {
+        font-size: pxTorem(18px);
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.right {
+    @include num(pxTorem(30px), 90%);
+    #{$bg}: #ccc;
+    @include absolute(fixed);
+    right: pxTorem(10px);
+    top: 5%;
+    text-align: center;
+    h4 {
+        font-size: pxTorem(18px);
+    }
+}
